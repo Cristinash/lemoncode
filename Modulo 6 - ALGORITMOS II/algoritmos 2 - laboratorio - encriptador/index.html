@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Standard bajo el cual codificamos los caracteres a lenguaje máquina -->
+  <meta charset="utf-8">
+  <!-- Optimización para dispositivos móviles. Por defecto, el navegador, renderiza
+  el contenido en un viewport virtual más grande para despues reescalarlo al tamaño
+  de pantalla. Hace esto porque supone que la web no está optimizada para móvil (no 
+  usa media queries para controlar distintos tamaños de pantalla). Con esta técnica
+  se consigue que webs no optimizadas se rendericen correctamente en pantallas más 
+  pequeñas. Sin embargo, perjudica a webs que SI han sido optimizadas usando media
+  queries, ya que las mediaqueries en un viewport mas gránde podrían no detectarse
+  o no funcionar adecuadamente. En tal caso, indicamos al navegador que utilice
+  un viewport igual al tamaño de pantalla del dispositivo y sin escalado inicial (=1).
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Título que se verá en la pestaña del navegador -->
+  <title>Bootcamp Javascript - Módulo 3 - Funciones</title>
+  <!-- Añade la hoja de estilos con las reglas css -->
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <header id="title">
+    <h1>Playground</h1>
+    <h4>See console (F12)</h4>
+  </header>
+  <main>
+    <textarea id="encrypt-area"></textarea>
+    <button onclick="transformMessage(text,encryptInput, decryptInput, plainAlphabet)" id="encrypt-btn">encrypt</button>
+    <button onclick="transformMessage(text,decryptInput, encryptInput, encryptedAlphabet)" id="decrypt-btn">decrypt</button>
+    <textarea id="decrypt-area"></textarea>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
