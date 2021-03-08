@@ -28,11 +28,12 @@ var calculateBillsToReturn = () => {
                 quantityArr.push(Math.trunc(division)); //storing bills quantity in array           
             }      
 
-            moneyToReturn = moneyToReturn - Math.trunc(division) * money[i]; //Vemos que podemos dar 2 billetes de 20 euros, así que lo restamos del 
-            //importe de la devolución importe devolución = importe devolución - 2 * 20 .
+            moneyToReturn = moneyToReturn - Math.trunc(division) * money[i]; 
             console.log("money to return  AFTER : " + moneyToReturn);
             console.log(quantityArr + " billetes de " + validBillsArr);
-            if(division = 0){return;}
+            if(division == 0){
+                return validBillsArr, quantityArr;
+            }
     };
 };
 
